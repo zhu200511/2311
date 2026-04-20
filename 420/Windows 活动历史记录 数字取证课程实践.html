@@ -1,0 +1,511 @@
+<!DOCTYPE html><html><head>
+      <title>Windows 活动历史记录 数字取证课程实践</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Lenovo\.trae-cn\extensions\shd101wyy.markdown-preview-enhanced-0.8.23-universal\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<p>Windows 活动历史记录 数字取证课程实践</p>
+<p>我来帮你了解Windows活动历史记录的数字取证实践。这是一个涉及Windows系统取证分析的专业话题，让我搜索相关的技术资料和最新信息。<br>
+根据搜索结果，我为你整理一份关于 <strong>Windows 活动历史记录（Activity History/Timeline）数字取证</strong> 的课程实践指南。</p>
+<h2 id="windows-活动历史记录数字取证实践">Windows 活动历史记录数字取证实践 </h2>
+<h3 id="一-核心概念与价值">一、核心概念与价值 </h3>
+<p>Windows 10 在 1803 版本引入了 <strong>Timeline（时间线）</strong> 功能，通过 <strong>活动历史记录（Activity History）</strong> 追踪用户最近 30 天内的系统活动 。这对数字取证具有重要价值：</p>
+<ul>
+<li><strong>用户通常未意识到该功能存在</strong> ，因此保留了大量未被篡改的证据</li>
+<li>可重建用户行为时间线，即使传统日志已被清除</li>
+<li>能追溯文件访问、应用程序执行、剪贴板操作等详细活动</li>
+</ul>
+<hr>
+<h3 id="二-关键取证文件位置">二、关键取证文件位置 </h3>
+<p><strong>主要数据库文件：</strong></p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>%LocalAppData%\ConnectedDevicesPlatform\<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>用户配置文件</span><span class="token punctuation">&gt;</span></span>\ActivitiesCache.db
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20161033.png" alt="image"><br>
+<strong>相关文件：</strong></p>
+<ul>
+<li><code>ActivitiesCache.db</code> — SQLite 数据库主文件</li>
+<li><code>ActivitiesCache.db-shm</code> — 共享内存文件</li>
+<li><code>ActivitiesCache.db-wal</code> — 预写日志（可能包含未提交数据）</li>
+</ul>
+<p><strong>剪贴板历史（如启用）：</strong></p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>%LocalAppData%\Microsoft\Windows\Clipboard\
+</code></pre><h2><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20161326.png" alt="image"><br>
+使用win+V查看<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20181045.png" alt="image"></h2>
+<h3 id="三-数据库结构分析">三、数据库结构分析 </h3>
+<p><code>ActivitiesCache.db</code> 是 <strong>SQLite 格式</strong> 数据库，关键表包括：</p>
+<table>
+<thead>
+<tr>
+<th>表名</th>
+<th>取证价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Activity</code></td>
+<td>核心活动记录，包含应用ID、时间戳、Payload</td>
+</tr>
+<tr>
+<td><code>Activity_PackageID</code></td>
+<td>应用程序包标识映射</td>
+</tr>
+<tr>
+<td><code>ActivityOperation</code></td>
+<td>操作详情，含剪贴板数据（ClipboardPayload）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键字段解析：</strong></p>
+<ul>
+<li><strong>AppID</strong> — 执行的应用程序（如 <code>Microsoft Word</code> ）</li>
+<li><strong>Payload</strong> — JSON 格式数据，包含文件路径、显示文本等</li>
+<li><strong>StartTime/EndTime</strong> — 纪元时间戳（需转换）</li>
+<li><strong>ActivityType</strong> — 类型 10 表示剪贴板操作，类型 16 表示复制/粘贴</li>
+</ul>
+<hr>
+<h3 id="四-取证分析步骤">四、取证分析步骤 </h3>
+<h4 id="1-现场勘查与提取">1. 现场勘查与提取 </h4>
+<pre data-role="codeBlock" data-info="powershell" class="language-powershell powershell"><code><span class="token comment"># 定位数据库文件（在管理员 PowerShell 中）</span>
+<span class="token function">Get-ChildItem</span> <span class="token operator">-</span>Path <span class="token string">"<span class="token variable">$env</span>:LOCALAPPDATA\ConnectedDevicesPlatform"</span> <span class="token operator">-</span>Recurse <span class="token operator">-</span><span class="token keyword keyword-Filter">Filter</span> <span class="token string">"ActivitiesCache.db*"</span>
+</code></pre><p><strong>注意事项：</strong></p>
+<ul>
+<li>优先采用 <strong>离线提取</strong> （Live Response 或磁盘镜像），避免数据覆盖</li>
+<li>数据库默认保留约 <strong>30 天</strong> 数据，具有时效性</li>
+<li>需停止 <code>CDPUserSvc_*</code> 服务后再复制，避免文件锁定</li>
+</ul>
+<h4 id="2-数据库解析">2. 数据库解析 </h4>
+<p>使用 <strong>DB Browser for SQLite</strong> 或 <strong>Autopsy</strong> 等工具打开数据库。<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20161754.png" alt="image"><br>
+<strong>关键 SQL 查询示例：</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 查看最近的应用活动</span>
+<span class="token keyword keyword-SELECT">SELECT</span> 
+    AppId<span class="token punctuation">,</span>
+    ActivityType<span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span>StartTime<span class="token operator">/</span><span class="token number">10000000</span> <span class="token operator">-</span> <span class="token number">11644473600</span><span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> StartTime_Local<span class="token punctuation">,</span>
+    Payload
+<span class="token keyword keyword-FROM">FROM</span> Activity
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> StartTime <span class="token keyword keyword-DESC">DESC</span>
+<span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">50</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20162616.png" alt="image"></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 查看 Activity 表的全部 ActivityType 分布</span>
+<span class="token keyword keyword-SELECT">SELECT</span> 
+    ActivityType<span class="token punctuation">,</span>
+    <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 记录数量<span class="token punctuation">,</span>
+    <span class="token function">MIN</span><span class="token punctuation">(</span>StartTime<span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 最早时间戳<span class="token punctuation">,</span>
+    <span class="token function">MAX</span><span class="token punctuation">(</span>StartTime<span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 最晚时间戳
+<span class="token keyword keyword-FROM">FROM</span> Activity
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> ActivityType
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> ActivityType<span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20165437.png" alt="image"></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 查看type12、15的原始记录</span>
+<span class="token keyword keyword-SELECT">SELECT</span> 
+    AppId<span class="token punctuation">,</span>
+    ActivityType<span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span>StartTime<span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> <span class="token keyword keyword-Time">Time</span><span class="token punctuation">,</span>
+    Payload
+<span class="token keyword keyword-FROM">FROM</span> Activity
+<span class="token keyword keyword-WHERE">WHERE</span> ActivityType <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> StartTime <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20170235.png" alt="image"><br>
+发现这是 Windows 凭据和加密子系统的审计痕迹</p>
+<h4 id="3-时间戳转换">3. 时间戳转换 </h4>
+<p>Windows 活动历史记录使用 <strong>纪元时间（Epoch Time）</strong> ，需转换为可读格式：</p>
+<ul>
+<li>通常基于 <strong>1601-01-01</strong> 的 Windows 文件时间</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 查询正确的用户活动时间线</span>
+<span class="token keyword keyword-SELECT">SELECT</span> 
+    AppId<span class="token punctuation">,</span>
+    ActivityType<span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span>StartTime<span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> StartTime_Local<span class="token punctuation">,</span>
+    Payload
+<span class="token keyword keyword-FROM">FROM</span> Activity
+<span class="token keyword keyword-WHERE">WHERE</span> StartTime <span class="token operator">&gt;</span> <span class="token number">0</span>
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> StartTime <span class="token keyword keyword-DESC">DESC</span>
+<span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">50</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20165813.png" alt="image"></p>
+<h4 id="4-关联分析-找到用户打开文件的证据">4. 关联分析、找到"用户打开文件"的证据 </h4>
+<p><strong>当前数据库的问题</strong></p>
+<p>你的 <code>ActivitiesCache.db</code> 只有 Type 11/12/15（系统配置、凭据、加密）， <strong>没有 Type 5/6（文件打开、应用聚焦）</strong> 。</p>
+<h3 id="替代数据源windows-跳转列表jump-lists">替代数据源：Windows 跳转列表（Jump Lists） </h3>
+<p>Jump Lists 记录用户最近打开的文件，是活动历史记录的重要补充。</p>
+<p><strong>文件位置</strong></p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>%AppData%\Microsoft\Windows\Recent\AutomaticDestinations\
+%AppData%\Microsoft\Windows\Recent\CustomDestinations\
+</code></pre><h4 id="提取步骤">提取步骤 </h4>
+<p><strong>步骤 1：定位 Jump Lists 文件</strong></p>
+<pre data-role="codeBlock" data-info="powershell" class="language-powershell powershell"><code><span class="token comment"># 在 PowerShell 中执行</span>
+<span class="token function">Get-ChildItem</span> <span class="token string">"<span class="token variable">$env</span>:APPDATA\Microsoft\Windows\Recent\AutomaticDestinations"</span> <span class="token punctuation">|</span> <span class="token function">Select-Object</span> Name<span class="token punctuation">,</span> LastWriteTime
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20172105.png" alt="image"><br>
+<strong>步骤 2：解析 Jump Lists</strong> Jump Lists 是复合二进制文件，需要专用工具：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JumpListView</strong> (NirSoft)</td>
+<td>免费，图形界面，直接查看</td>
+</tr>
+<tr>
+<td><strong>JLECmd</strong> (Eric Zimmerman)</td>
+<td>命令行，取证标准工具</td>
+</tr>
+<tr>
+<td><strong>Autopsy</strong></td>
+<td>综合取证平台自动提取</td>
+</tr>
+</tbody>
+</table>
+<h4 id="使用-jlecmd-提取推荐">使用 JLECmd 提取（推荐） </h4>
+<pre data-role="codeBlock" data-info="powershell" class="language-powershell powershell"><code><span class="token comment"># 下载 JLECmd 后执行</span>
+<span class="token punctuation">.</span>\JLECmd<span class="token punctuation">.</span>exe <span class="token operator">-</span>d <span class="token string">"C:\Users\Lenovo\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations"</span> <span class="token operator">--</span>csv <span class="token punctuation">.</span>\Auto <span class="token operator">--</span>csvf <span class="token string">"All_AutoDest.csv"</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20174410.png" alt="image"><br>
+输出 CSV 包含：</p>
+<ul>
+<li>文件名</li>
+<li>文件路径</li>
+<li>最后访问时间</li>
+<li>创建时间</li>
+<li>应用标识<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20175001.png" alt="image"></li>
+</ul>
+<hr>
+<h3 id="替代数据源srum-数据库">替代数据源：SRUM 数据库 </h3>
+<p>SRUM（System Resource Usage Monitor）保留 30 天应用使用记录。</p>
+<h4 id="文件位置">文件位置 </h4>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>C:\Windows\System32\sru\SRUDB.dat
+</code></pre><h4 id="提取步骤-1">提取步骤 </h4>
+<p><strong>步骤 1：复制 SRUM 数据库到evidence目录（需要 SYSTEM 权限）</strong><br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20180133.png" alt="image"><br>
+<strong>步骤 2：使用 srumECmd 解析</strong></p>
+<ul>
+<li>工具会自动创建 E:\迅雷下载\SrumECmd\evidence\results 文件夹<br>
+解析完成后，里面会生成多个 CSV 文件，核心的有：<br>
+SrumECmd_AppResourceUsage.csv：程序运行记录（时间、时长）<br>
+SrumECmd_NetworkConnections.csv：网络连接记录（IP、端口）<br>
+SrumECmd_NetworkUsage.csv：流量使用情况<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20180624.png" alt="image"><br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20180802.png" alt="image"></li>
+</ul>
+<hr>
+<h3 id="替代数据源lnk-文件快捷方式">替代数据源：LNK 文件（快捷方式） </h3>
+<p>Windows 自动创建最近文件的快捷方式。</p>
+<h4 id="文件位置-1">文件位置 </h4>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>%AppData%\Microsoft\Windows\Recent\
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20171300.png" alt="image"></p>
+<hr>
+<h3 id="五-注意事项与局限性">五、注意事项与局限性 </h3>
+<ol>
+<li><strong>隐私设置影响</strong> ：用户可在"设置 → 隐私 → 活动历史记录"中关闭收集，或手动清除数据</li>
+<li><strong>云同步干扰</strong> ：如启用 Microsoft 账户同步，活动可能跨设备，需区分本地与云端记录</li>
+<li><strong>数据库损坏</strong> ：删除操作可能导致记录变为"灰色"残留，需检查 WAL 文件</li>
+<li><strong>剪贴板限制</strong> ：仅当启用"剪贴板历史记录"和"跨设备同步"时才会记录</li>
+</ol>
+<hr>
+<hr>
+<h2 id="windows通知中心数字取证实践指南探索式">Windows通知中心数字取证实践指南（探索式） </h2>
+<h3 id="阶段一发现目标">阶段一：发现目标 </h3>
+<p><strong>情境</strong> ：您接到任务，需要分析一台Windows电脑的通知历史，但不知道数据存储在哪里。</p>
+<p><strong>步骤1：寻找可能的存储位置</strong></p>
+<p>基于Windows应用数据存储规范，用户数据通常位于：</p>
+<pre data-role="codeBlock" data-info="powershell" class="language-powershell powershell"><code><span class="token comment"># 查看AppData\Local下的Microsoft相关目录</span>
+<span class="token function">Get-ChildItem</span> <span class="token string">"<span class="token variable">$env</span>:LOCALAPPDATA\Microsoft"</span> <span class="token punctuation">|</span> <span class="token function">Where-Object</span> <span class="token punctuation">{</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-match</span> <span class="token string">"Notif|Push|Toast|Wpn"</span> <span class="token punctuation">}</span>
+
+<span class="token comment"># 全局搜索可能的文件</span>
+<span class="token function">Get-ChildItem</span> <span class="token string">"<span class="token variable">$env</span>:LOCALAPPDATA"</span> <span class="token operator">-</span>Recurse <span class="token operator">-</span>File <span class="token operator">-</span>ErrorAction SilentlyContinue <span class="token punctuation">|</span> 
+    <span class="token function">Where-Object</span> <span class="token punctuation">{</span> <span class="token variable">$_</span><span class="token punctuation">.</span>Name <span class="token operator">-match</span> <span class="token string">"wpndatabase|notification|push"</span> <span class="token punctuation">}</span> <span class="token punctuation">|</span>
+    <span class="token function">Select-Object</span> FullName<span class="token punctuation">,</span> Length<span class="token punctuation">,</span> LastWriteTime
+</code></pre><p><strong>预期发现</strong> ：您应该能找到路径：</p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>C:\Users\[用户名]\AppData\Local\Microsoft\Windows\Notifications\wpndatabase.db
+</code></pre><p><strong>验证发现</strong> ：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20191323.png" alt="image"></p>
+<p><strong>关键疑问</strong> ：为什么有3个文件？这是什么数据库格式？</p>
+<hr>
+<h3 id="阶段二识别数据格式">阶段二：识别数据格式 </h3>
+<p><strong>情境</strong> ：您发现了一个名为 <code>wpndatabase.db</code> 的文件，但不知道用什么工具打开。</p>
+<p><strong>步骤1：选择工具</strong></p>
+<table>
+<thead>
+<tr>
+<th>工具选项</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB Browser for SQLite</td>
+<td>图形界面，适合初学者探索</td>
+</tr>
+<tr>
+<td>sqlite3命令行</td>
+<td>脚本化操作，适合批量处理</td>
+</tr>
+<tr>
+<td>Python + sqlite3库</td>
+<td>自动化分析，适合深度取证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议</strong> ：首次探索使用 <strong>DB Browser for SQLite</strong> （免费，官网下载）。</p>
+<hr>
+<h3 id="阶段三首次打开数据库探索模式">阶段三：首次打开数据库（探索模式） </h3>
+<p><strong>情境</strong> ：您用DB Browser打开了 <code>wpndatabase.db</code> ，看到一堆表名，但不知道哪个重要。</p>
+<p><strong>步骤1：查看所有表</strong></p>
+<p>在DB Browser的"数据库结构"标签页，您会看到：</p>
+<ul>
+<li>Notification</li>
+<li>NotificationHandler</li>
+<li>HandlerAssets</li>
+<li>HandlerSettings</li>
+<li>Metadata</li>
+<li>WNSPushChannel</li>
+<li>NotificationData</li>
+<li>TimedNotification</li>
+<li>TransientTable<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20191503.png" alt="image"><br>
+<strong>思考</strong> ：哪个表可能包含实际通知内容？</li>
+</ul>
+<p><strong>步骤2：逐个浏览表内容</strong></p>
+<p><strong>先查看Metadata</strong> （通常记录数最少，容易理解）：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20190048.png" alt="image"></p>
+<p><strong>发现与推理</strong> ：</p>
+<ul>
+<li><code>maxCount</code> 表示最大保留数量 → <strong>通知有数量限制，旧的会被删除</strong></li>
+<li><code>CurrentNotificationId=37937</code> → <strong>系统累计处理过37,937条通知</strong></li>
+<li>但 <code>toast:maxCount=20</code> → <strong>目前只保留20条弹窗通知</strong></li>
+</ul>
+<p><strong>结论</strong> ：这个数据库是 <strong>循环覆盖</strong> 的！大部分历史通知已被删除。</p>
+<hr>
+<h3 id="阶段四寻找当前保留的通知">阶段四：寻找当前保留的通知 </h3>
+<p><strong>情境</strong> ：您知道只有20条Toast通知被保留，想找到它们。</p>
+<p><strong>步骤1：浏览Notification表</strong></p>
+<p>切换到"浏览数据"标签页，选择表： <code>Notification</code></p>
+<p>您会看到字段：</p>
+<ul>
+<li>Id, HandlerId, Type, Payload, ArrivalTime, ExpiryTime...<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20190125.png" alt="image"></li>
+</ul>
+<p><strong>观察到的现象</strong> ：</p>
+<ul>
+<li><code>Type</code> 列有 <code>toast</code> 和 <code>tile</code> 两种值</li>
+<li><code>Payload</code> 列显示 <code>&lt;toast...</code> 或 <code>&lt;tile...</code> 开头的XML内容</li>
+<li><code>ArrivalTime</code> 是长数字（如 <code>1342115560...</code>）</li>
+</ul>
+<p><strong>疑问</strong> ：这些长数字是什么时间格式？</p>
+<p><strong>步骤2：尝试理解时间戳</strong></p>
+<p>在DB Browser中执行SQL测试：</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 尝试Unix时间转换</span>
+<span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span>ArrivalTime<span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">)</span> <span class="token keyword keyword-FROM">FROM</span> Notification <span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token comment">-- 错误日期 → 排除Unix时间戳</span>
+<span class="token comment">-- 尝试Windows FILETIME转换</span>
+<span class="token keyword keyword-SELECT">SELECT</span> <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ArrivalTime <span class="token operator">/</span> <span class="token number">10000000.0</span> <span class="token operator">-</span> <span class="token number">11644473600</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-FROM">FROM</span> Notification <span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token comment">-- 结果应该是合理日期（如2024-XX-XX）</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20191829.png" alt="image"><br>
+<strong>发现</strong> ：这是 <strong>Windows FILETIME</strong> 格式（1601年1月1日起的100纳秒间隔）。</p>
+<hr>
+<h3 id="阶段五识别通知来源应用">阶段五：识别通知来源应用 </h3>
+<p><strong>情境</strong> ：您看到 <code>HandlerId</code> 列是数字（如133, 719, 723），但不知道对应哪个应用。</p>
+<p><strong>步骤1：查找应用名称映射表</strong></p>
+<p>浏览 <code>HandlerAssets</code> 表：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20190026.png" alt="image"></p>
+<p><strong>发现</strong> ： <code>HandlerId=317</code> 是"设置"应用， <code>HandlerId=608</code> 是"篡改猴"（Tampermonkey浏览器扩展）。</p>
+<p><strong>疑问</strong> ：为什么只有6条记录？Notification表有更多HandlerId！</p>
+<p><strong>步骤2：查找更完整的应用注册信息</strong></p>
+<p>浏览 <code>NotificationHandler</code> 表（349条记录）：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20190210.png" alt="image"></p>
+<p><strong>发现</strong> ： <code>RecordId</code> 似乎与 <code>HandlerId</code> 对应！ <code>PrimaryId</code> 是应用的完整标识名。</p>
+<hr>
+<h3 id="阶段六建立完整关联查询">阶段六：建立完整关联查询 </h3>
+<p><strong>情境</strong> ：您已经知道表之间的关系，现在想建立完整的通知时间线。</p>
+<p><strong>步骤1：编写基础关联查询</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> 
+    n<span class="token punctuation">.</span>Id <span class="token keyword keyword-as">as</span> 通知ID<span class="token punctuation">,</span>
+    n<span class="token punctuation">.</span>HandlerId<span class="token punctuation">,</span>
+    ha<span class="token punctuation">.</span>AssetValue <span class="token keyword keyword-as">as</span> 应用名称<span class="token punctuation">,</span>
+    n<span class="token punctuation">.</span><span class="token keyword keyword-Type">Type</span> <span class="token keyword keyword-as">as</span> 通知类型<span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>ArrivalTime <span class="token operator">/</span> <span class="token number">10000000.0</span> <span class="token operator">-</span> <span class="token number">11644473600</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 接收时间<span class="token punctuation">,</span>
+    n<span class="token punctuation">.</span>Payload <span class="token keyword keyword-as">as</span> 原始内容
+<span class="token keyword keyword-FROM">FROM</span> Notification n
+<span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> HandlerAssets ha 
+    <span class="token keyword keyword-ON">ON</span> n<span class="token punctuation">.</span>HandlerId <span class="token operator">=</span> ha<span class="token punctuation">.</span>HandlerId 
+    <span class="token operator">AND</span> ha<span class="token punctuation">.</span>AssetKey <span class="token operator">=</span> <span class="token string">'DisplayName'</span>
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> n<span class="token punctuation">.</span>ArrivalTime <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20192613.png" alt="image"><br>
+<strong>遇到的问题</strong> ：部分 <code>HandlerId</code> 在 <code>HandlerAssets</code> 中没有 <code>DisplayName</code> 记录。</p>
+<p><strong>解决方案</strong> ：使用 <code>NotificationHandler</code> 表作为后备：</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> 
+    n<span class="token punctuation">.</span>Id <span class="token keyword keyword-as">as</span> 通知ID<span class="token punctuation">,</span>
+    n<span class="token punctuation">.</span>HandlerId<span class="token punctuation">,</span>
+    <span class="token keyword keyword-COALESCE">COALESCE</span><span class="token punctuation">(</span>ha<span class="token punctuation">.</span>AssetValue<span class="token punctuation">,</span> nh<span class="token punctuation">.</span>PrimaryId<span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 应用标识<span class="token punctuation">,</span>
+    n<span class="token punctuation">.</span><span class="token keyword keyword-Type">Type</span> <span class="token keyword keyword-as">as</span> 通知类型<span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>ArrivalTime <span class="token operator">/</span> <span class="token number">10000000.0</span> <span class="token operator">-</span> <span class="token number">11644473600</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 接收时间<span class="token punctuation">,</span>
+    substr<span class="token punctuation">(</span>n<span class="token punctuation">.</span>Payload<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 内容摘要
+<span class="token keyword keyword-FROM">FROM</span> Notification n
+<span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> HandlerAssets ha 
+    <span class="token keyword keyword-ON">ON</span> n<span class="token punctuation">.</span>HandlerId <span class="token operator">=</span> ha<span class="token punctuation">.</span>HandlerId <span class="token operator">AND</span> ha<span class="token punctuation">.</span>AssetKey <span class="token operator">=</span> <span class="token string">'DisplayName'</span>
+<span class="token keyword keyword-LEFT">LEFT</span> <span class="token keyword keyword-JOIN">JOIN</span> NotificationHandler nh 
+    <span class="token keyword keyword-ON">ON</span> n<span class="token punctuation">.</span>HandlerId <span class="token operator">=</span> nh<span class="token punctuation">.</span>RecordId
+<span class="token keyword keyword-ORDER">ORDER</span> <span class="token keyword keyword-BY">BY</span> n<span class="token punctuation">.</span>ArrivalTime <span class="token keyword keyword-DESC">DESC</span><span class="token punctuation">;</span>
+</code></pre><h2><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20192718.png" alt="image"></h2>
+<h3 id="阶段七解析通知内容payload">阶段七：解析通知内容（Payload） </h3>
+<p><strong>情境</strong> ： <code>Payload</code> 字段包含XML，您想提取人类可读的文本。</p>
+<p><strong>步骤1：查看原始XML</strong></p>
+<p>在DB Browser中双击某行的 <code>Payload</code> 单元格，右侧显示：</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>toast</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>visual</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>binding</span> <span class="token attr-name">template</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ToastText02<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>任务完成<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>您的任务已完成，可返回 TRAE 查看结果。
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>binding</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>visual</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">silent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>toast</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20193057.png" alt="image"><br>
+<strong>步骤2：提取文本的SQL尝试</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token comment">-- 提取 Payload 前 N 个字符预览</span>
+<span class="token keyword keyword-SELECT">SELECT</span> 
+    Id<span class="token punctuation">,</span>
+    HandlerId<span class="token punctuation">,</span>
+    <span class="token keyword keyword-Type">Type</span><span class="token punctuation">,</span>
+    <span class="token keyword keyword-datetime">datetime</span><span class="token punctuation">(</span><span class="token punctuation">(</span>ArrivalTime <span class="token operator">/</span> <span class="token number">10000000.0</span> <span class="token operator">-</span> <span class="token number">11644473600</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'unixepoch'</span><span class="token punctuation">,</span> <span class="token string">'localtime'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 时间<span class="token punctuation">,</span>
+    substr<span class="token punctuation">(</span>Payload<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 内容预览
+<span class="token keyword keyword-FROM">FROM</span> Notification
+<span class="token keyword keyword-WHERE">WHERE</span> <span class="token keyword keyword-Type">Type</span> <span class="token operator">=</span> <span class="token string">'toast'</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20193317.png" alt="image"><br>
+<strong>注意</strong> ：<br>
+优点：不会出错，快速查看内容结构<br>
+缺点：包含 XML 标签，不够美观。</p>
+<hr>
+<h3 id="阶段八分析权限配置handlersettings">阶段八：分析权限配置（HandlerSettings） </h3>
+<p><strong>情境</strong> ：您发现了 <code>HandlerSettings</code> 表有8,292条记录，想知道这是什么。</p>
+<p><strong>步骤1：查看单个Handler的配置</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> HandlerSettings <span class="token keyword keyword-WHERE">WHERE</span> HandlerId <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">20</span><span class="token punctuation">;</span>
+</code></pre><p><strong>观察到的数据</strong> ：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20193445.png" alt="image"><br>
+<strong>推理</strong> ：</p>
+<ul>
+<li>每个HandlerId有多条记录 → <strong>这是权限配置表</strong></li>
+<li><code>Value</code> 只有0或1 → <strong>布尔型开关</strong></li>
+<li><code>SettingKey</code> 有前缀（s:, c:, r:）→ <strong>不同前缀代表不同类别</strong></li>
+</ul>
+<p><strong>步骤2：统计前缀含义</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> 
+    substr<span class="token punctuation">(</span>SettingKey<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 前缀<span class="token punctuation">,</span>
+    <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> 数量
+<span class="token keyword keyword-FROM">FROM</span> HandlerSettings
+<span class="token keyword keyword-GROUP">GROUP</span> <span class="token keyword keyword-BY">BY</span> substr<span class="token punctuation">(</span>SettingKey<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20193546.png" alt="image"><br>
+<strong>假设验证</strong> ：</p>
+<ul>
+<li><code>s:</code> 最多 → <strong>Setting（实际设置值）</strong></li>
+<li><code>c:</code> 次之 → <strong>Capability（应用声明的能力）</strong></li>
+<li><code>r:</code> 最少 → <strong>Restriction（系统限制）</strong></li>
+</ul>
+<hr>
+<h3 id="阶段九发现云端推送通道">阶段九：发现云端推送通道 </h3>
+<p><strong>情境</strong> ：您看到 <code>WNSPushChannel</code> 表，不知道WNS是什么。</p>
+<p><strong>步骤1：查看内容</strong></p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql sql"><code><span class="token keyword keyword-SELECT">SELECT</span> <span class="token operator">*</span> <span class="token keyword keyword-FROM">FROM</span> WNSPushChannel <span class="token keyword keyword-LIMIT">LIMIT</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</code></pre><p><strong>观察到的数据</strong> ：<br>
+<img src="%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-20%20193637.png" alt="image"><br>
+<strong>推理</strong> ：</p>
+<ul>
+<li><code>Uri</code> 包含 <code>notify.windows.com</code> → <strong>微软官方域名</strong></li>
+<li><code>https://</code> 协议 → <strong>云端服务器</strong></li>
+<li><code>HandlerId</code> 关联应用 → <strong>应用通过此通道接收云端推送</strong></li>
+</ul>
+<p><strong>搜索验证</strong> （在浏览器或搜索引擎中）：</p>
+<blockquote>
+<p>"WNS Windows Push Notification Service"</p>
+</blockquote>
+<p><strong>确认</strong> ：WNS = Windows Push Notification Service，是微软的云端推送服务。</p>
+<p><strong>取证意义</strong> ：即使应用未运行，也能通过WNS接收通知。通知可能来自云端而非本地生成。</p>
+<hr>
+<h3 id="探索过程中的关键决策树">探索过程中的关键决策树 </h3>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown markdown"><code>开始：寻找Windows通知数据
+  │
+  ├─► 找到 wpndatabase.db
+  │     │
+  │     ├─► 识别为SQLite格式 → 使用DB Browser打开
+  │     │
+  │     ├─► 发现多个表 → 从Metadata开始（数据最少）
+  │     │     │
+  │     │     └─► 发现 CurrentNotificationId=37937（累计通知数）
+  │     │           发现 maxCount限制（Toast仅保留20条）
+  │     │
+  │     ├─► 查看Notification表 → 发现HandlerId数字
+  │     │     │
+  │     │     └─► 关联HandlerAssets → 获取应用名称
+  │     │           关联NotificationHandler → 获取系统标识
+  │     │
+  │     ├─► 发现ArrivalTime是长数字 → 测试转换
+  │     │     │
+  │     │     ├─► Unix时间转换失败（日期错误）
+  │     │     │
+  │     │     └─► FILETIME转换成功（日期合理）
+  │     │
+  │     ├─► 查看Payload是XML → 提取文本内容
+  │     │
+  │     ├─► 发现HandlerSettings表 → 分析权限配置
+  │     │     │
+  │     │     └─► 识别前缀含义（s:/c:/r:）
+  │     │
+  │     └─► 发现WNSPushChannel表 → 识别云端推送
+  │           │
+  │           └─► 验证WNS = Windows Push Notification Service
+  │
+  └─► 未找到 → 检查Windows版本（Win7/8无此数据库）
+        检查用户权限（是否访问了正确用户目录）
+</code></pre><hr>
+<h3 id="您现在所处的阶段">您现在所处的阶段 </h3>
+<p>您已完成：</p>
+<ul>
+<li>✅ 阶段一：发现数据库位置</li>
+<li>✅ 阶段二：识别SQLite格式</li>
+<li>✅ 阶段三：打开并浏览表结构</li>
+<li>✅ 阶段四：发现FILETIME时间戳</li>
+<li>✅ 阶段五：识别HandlerId映射关系</li>
+<li>✅ 阶段六：建立关联查询</li>
+<li>✅ 阶段七：查看Payload XML内容</li>
+<li>✅ 阶段八：浏览HandlerSettings</li>
+<li>✅ 阶段九：发现WNSPushChannel</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
